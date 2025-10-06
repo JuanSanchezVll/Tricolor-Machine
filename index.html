@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tricolor Machine</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- VIDEO DE FUNDO -->
+    <video class="background-video" src="https://media.istockphoto.com/id/2179303732/pt/v%C3%ADdeo/night-drone-flight-around-a-soccer-stadium-aerial-views-capture-the-pitch-and-stands-filled.mp4?s=mp4-640x640-is&k=20&c=xTibSf6rUnDlxqcfpbuaQYl0bFgKuihhZbrQren898I=" autoplay loop muted></video>
+
+    <!-- OVERLAY ESCURA-->
+    <div class="overlay"></div>
+
+    <!-- LOGO FIXA-->
+    <img class="logo" src="assets/Logotipo2.png" alt="Logo Tricolor">
+
+    <!-- CONTAINER CENTRAL -->
+    <div class="box">
+        <div class="conteudo">
+            <h1>TRICOLOR MACHINE</h1> <!-- Título da página -->
+
+            <!-- INPUT DE VALOR -->
+            <input id="inputValue" type="text" placeholder="Digite o valor">
+
+            <!-- SELECT DA BASE DE ENTRADA -->
+            <select id="inputBase">
+                <option value="decimal">Decimal</option>
+                <option value="hexadecimal">Hexadecimal</option>
+                <option value="octal">Octal</option>
+                <option value="binario">Binário</option>
+            </select>
+
+            <h3>Converter para:</h3>
+
+            <!-- BOTÕES DE CONVERSÃO -->
+            <div>
+                <div class="convert-button" data-target="convertDecimal">Decimal</div>
+                <div class="convert-button" data-target="convertHexadecimal">Hexadecimal</div>
+                <div class="convert-button" data-target="convertOctal">Octal</div>
+                <div class="convert-button" data-target="convertBinario">Binário</div>
+            </div>
+            <!-- Substituí os checkboxes do código base por botões Funcionalidade mantém-se a mesma -->
+
+            <!-- BOTÃO CONVERTER -->
+            <button onclick="converter()">Converter</button>
+
+            <!-- OUTPUT -->
+            <div id="output"></div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Copyright © 2025 | by Juan David Valle Sánchez</p>
+        <p>- Tema São Paulo FC -</p>
+    </footer>
+
+    <!-- SCRIPT JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

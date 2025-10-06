@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    /* Remove margens padrões */
+    padding: 0;
+    /* Remove padding padrão */
+    box-sizing: border-box;
+    /* Inclui padding e borda na largura/altura */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Fonte legível */
+}
+
+/* BODY E HTML, com fundo escuro) */
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    /* Mantido para contraste com vídeo */
+}
+
+
+
+
+/* VIDEO DE FUNDO  */
+.background-video {
+    position: fixed;
+    /* Fica atrás de tudo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Mantém proporção */
+    z-index: 0;
+}
+
+/* OVERLAY ESCURA  */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* LOGO FIXA */
+.logo {
+    position: fixed;
+    top: 20px;
+    left: 15px;
+    width: 150px;
+    z-index: 3;
+}
+
+/* CONTAINER CENTRAL */
+.box {
+    position: relative;
+    display: flex;
+    /* centraliza com flexbox */
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    /* quase toda altura da tela */
+    z-index: 2;
+}
+
+.conteudo {
+    width: 400px;
+    max-width: 90%;
+    background: rgba(0, 0, 0, 0.85);
+    /* fundo semi-transparente */
+    padding: 30px;
+    border-radius: 15px;
+    /* bordas arredondadas */
+    border: 2px solid #ED145B;
+    /* borda colorida */
+    text-align: center;
+    color: #fff;
+}
+
+/* TITULO */
+h1 {
+    font-size: 2rem;
+    color: #ED145B;
+    text-shadow: 2px 2px 4px black;
+    margin-bottom: 20px;
+}
+
+/* INPUT E SELECT */
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 2px solid #ED145B;
+    margin: 10px 0;
+    background: #111;
+    color: #fff;
+}
+
+input[type="text"]::placeholder {
+    color: #ccc;
+}
+
+/* BOTÕES DE CONVERSÃO  */
+.convert-button {
+    display: inline-block;
+    margin: 5px 5px 5px 0;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 2px solid #ED145B;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    user-select: none;
+    font-size: 13px;
+}
+
+.convert-button.active {
+    background: #ED145B;
+    color: #000;
+}
+
+/* BOTÃO CONVERTER */
+button {
+    background: #ED145B;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 50%;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #EFB661;
+    color: #000;
+}
+
+/* OUTPUT */
+#output {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #6d0326;
+    color: #fff;
+    display: none;
+    /* inicial escondido */
+    text-align: left;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.resultado {
+    /* animação de aparecer resultado */
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    animation: fadeIn 0.6s forwards;
+}
+
+.resultado i {
+    /* ícones */
+    margin-right: 8px;
+    color: #ED145B;
+}
+
+@keyframes fadeIn {
+
+    /* animação */
+    to {
+        opacity: 1;
+    }
+}
+
+/* FOOTER  */
+footer {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 15px;
+    color: #aaa;
+    font-size: 12px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid #ED145B;
+    z-index: 3;
+}
+
+/* RESPONSIVO */
+/* @media screen and (max-width:768px) {
+    .conteudo {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        width: 80px;
+        left: 5px;
+    }
+
+    .convert-button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 13px;
+    }
+} */
